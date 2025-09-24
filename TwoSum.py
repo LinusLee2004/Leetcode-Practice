@@ -6,14 +6,3 @@ class TwoSum:
             if complement in numsToIndex:
                 return [numsToIndex[complement], i]
             numsToIndex[num] = i
-
-if __name__ == "__main__":
-    solution = TwoSum() 
-
-    nums = [11,18,2,7]
-
-    target = 9
-
-    result = solution.twoSum(nums, target)
-
-    print(result)
