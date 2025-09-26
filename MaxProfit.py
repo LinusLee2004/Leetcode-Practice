@@ -1,13 +1,18 @@
 class MaxProfit():
     def maxProfit(self, prices):
+        #Return 0 if null
         if not prices:
             return 0
+        #Lowest starts at first day
         lowest = prices[0]
         highest = 0
         for i in range(len(prices)):
+            #Profit for that day
             profit = prices[i] - lowest
+            #Compare to highest profit
             if profit > highest:
                 highest = profit
+            #Update lowest if current index is lower
             if prices[i] < lowest:
                 lowest = prices[i]
         return highest
