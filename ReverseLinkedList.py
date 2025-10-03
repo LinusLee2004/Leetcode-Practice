@@ -6,7 +6,10 @@
 class ReverseLinkedList():
     def reverseList(self, head):
         previous = None
-        head = head
-        next = head.next
-        while head:
-            
+        current = head
+        while current:
+            next = current.next
+            current.next = previous
+            previous = current
+            current = next
+        return previous
